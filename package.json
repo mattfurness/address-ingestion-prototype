@@ -2,15 +2,17 @@
   "name": "address-ingestion-prototype",
   "version": "1.0.0",
   "description": "Address Ingestion Prototype",
-  "main": "src/ingest.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ingest": "node ./src/index.js",
+    "test": "tape ./test/**/*.js",
+    "integrationTest": "tape ./test/ingest-tests.js",
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattfurness/address-ingestion-prototype.git"
   },
-  "author": "Mtt",
+  "author": "Matt",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mattfurness/address-ingestion-prototype/issues"
