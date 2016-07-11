@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "ingest": "node ./src/index.js",
-    "test": "tape ./test/**/*.js",
-    "integrationTest": "tape ./test/ingest-tests.js",
+    "test": "tape ./test/std/{,**/}*.js",
+    "integrationTest": "tape ./test/integration/{,**/}*.js"
   },
   "repository": {
     "type": "git",

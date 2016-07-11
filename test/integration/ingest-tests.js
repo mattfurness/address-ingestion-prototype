@@ -1,6 +1,6 @@
 var test = require('tape');
 var elasticsearch = require('elasticsearch');
-var getIngestionStream = require('../src/ingest');
+var getIngestionStream = require('../../src/ingest');
 
 test('Records from file can be ingested', function(assert) {
     var args = process.argv;
@@ -21,10 +21,10 @@ test('Records from file can be ingested', function(assert) {
                 type: 'test',
                 host: host
             },
-            _none: {
+            input: {
                 file: './test/data/small.json'
             }
-        });
+        }, () => {});
         stream.on('finish', function() {
             client.get({
                 index: 'test',

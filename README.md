@@ -22,7 +22,7 @@ npm install
 | --host (-h) | The elastic search host |
 
 ```sh
-npm run ingest -f FILE_PATH -type address -index addresses -host http://somehost/
+npm run ingest -f /path/to/file.json -type address -index addresses -host https://myuser:mypass@somehost/
 ```
 
 ## Running Tests
