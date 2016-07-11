@@ -1,6 +1,7 @@
 var test = require('tape');
 var elasticsearch = require('elasticsearch');
 var getIngestionStream = require('../../src/ingest');
+var reporter = require('../../src/input/console-percentage-reporter');
 
 test('Records from file can be ingested', function(assert) {
     var args = process.argv;
@@ -24,7 +25,7 @@ test('Records from file can be ingested', function(assert) {
             input: {
                 file: './test/data/small.json'
             }
-        }, () => {});
+        }, reporter);
         stream.on('finish', function() {
             client.get({
                 index: 'test',

@@ -4,7 +4,6 @@
   "description": "Address Ingestion Prototype",
   "main": "src/index.js",
   "scripts": {
-    "ingest": "node ./src/index.js",
     "test": "tape ./test/std/{,**/}*.js",
     "integrationTest": "tape ./test/integration/{,**/}*.js"
   },

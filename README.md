@@ -29,7 +29,7 @@ npm install
 | --host (-h) | The elastic search host |
 
 ```sh
-npm run ingest -f /path/to/file.json -type address -index addresses -host https://myuser:mypass@somehost/
+node ./src/index.js -f /path/to/file.json -type address -index addresses -host https://myuser:mypass@somehost/
 ```
 
 ## Running Tests
