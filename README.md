@@ -2,7 +2,14 @@
 
 ## Summary
 
-This prototype streams in records from a [json] file, maps them to elastic search records, and pushes them up in batches of 200 using the specified elastic search details.
+This prototype ingests records from a file in "record per line" json into elastic search using a single index and type.
+
+It achieves this by:
+* Streaming in records from a file in "record per line" json format.
+* Mapping them to elastic search records.
+* Pushing them up in batches of 200 to elastic search using the specified details.
+
+The use of stream enables ingestion of extremely large files.
 
 ## Installation
 
@@ -38,7 +45,7 @@ npm run test
 ```
 
 #### Integration Tests
-The integration test(s) will push 2 records to the specified host in the test index.
+The integration test(s) will push 2 records to the specified host in the "test" index.
 
 ```sh
 npm run integrationTest http://somehost/
