@@ -21,7 +21,7 @@ npm install
 
 ## Prerequisites
 
-There is no build script and no transpiling, so it is probably worth upgrading to the latest node, v6.3.0 at the time of writing.
+There is no build script and no transpiling, so it is probably worth upgrading to the latest node if you get errors, v6.3.0 at the time of writing.
 
 ## Ingesting data
 
