@@ -1,5 +1,5 @@
 var test = require('tape');
-var _idMapper = require('../../../src/es/record-mapper')._idMapper;
+var _idMapper = require('../../../src/output/record-mapper')._idMapper;
 var data = {_id: '1', name: 'test'};
 var indexOptions = { index: 'test-index', type: 'test-type' }
 

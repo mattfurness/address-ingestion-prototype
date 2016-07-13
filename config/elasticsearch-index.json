@@ -1,0 +1,37 @@
+{
+    "name": "addresses",
+    "details": {
+       "settings": {
+          "analysis": {
+             "filter": {
+                "edge_ngram_filter": {
+                   "type": "edge_ngram",
+                   "min_gram": 2,
+                   "max_gram": 20
+                }
+             },
+             "analyzer": {
+                "edge_ngram_analyzer": {
+                   "type": "custom",
+                   "tokenizer": "standard",
+                   "filter": [
+                      "lowercase",
+                      "edge_ngram_filter"
+                   ]
+                }
+             }
+          }
+       },
+       "mappings": {
+          "address": {
+             "properties": {
+                "full_address_line": {
+                   "type": "string",
+                   "analyzer": "edge_ngram_analyzer",
+                   "search_analyzer": "standard"
+                }
+             }
+          }
+       }
+    }
+}

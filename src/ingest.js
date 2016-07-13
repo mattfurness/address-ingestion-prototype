@@ -1,7 +1,7 @@
 var commandLineArgs = require('command-line-args');
 var createReadStream = require('./input/input-stream-factory');
-var createWriteStream = require('./es/output-stream-factory');
-var _idMapper = require('./es/record-mapper')._idMapper;
+var createWriteStream = require('./output/output-stream-factory');
+var _idMapper = require('./output/record-mapper')._idMapper;
 var eventStream = require('event-stream');
 
 module.exports = function getIngestionStream(options, percentageReporter) {
