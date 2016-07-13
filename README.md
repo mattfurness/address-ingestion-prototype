@@ -29,11 +29,11 @@ There is no build script and no transpiling, so it is probably worth upgrading t
 | ------ | ----------- |
 | --file (-f) | The file that contains the [address] data |
 | --type (-t) | The elastic search type of the records |
-| --index (-i) | The elastic search index of the records |
+| --index (-i) | The path to the json file that contains the index configuration |
 | --host (-h) | The elastic search host |
 
 ```sh
-node ./src/index.js -f /path/to/file.json -type address -index addresses -host https://myuser:mypass@somehost/
+node ./src/index.js -f /path/to/file.json -type address -index ./config/elasticsearch-index.json -host https://myuser:mypass@somehost/
 ```
 
 ## Running Tests
