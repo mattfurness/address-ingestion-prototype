@@ -5,6 +5,7 @@
 This prototype ingests records from a file in "record per line" json into elastic search using a single index and type.
 
 It achieves this by:
+* Recreates the index based on the details in the json passed specified. See `config/elasticsearch-index.json` for an example.
 * Streaming in records from a file in "record per line" json format.
 * Mapping them to elastic search records.
 * Pushing them up in batches of 200 to elastic search using the specified details.
